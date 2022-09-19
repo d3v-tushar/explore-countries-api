@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+.country-div{
+    border: 2px solid aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.country-div > img{
+    border: 1px solid black;
+    width: 20rem;
+}
+.country-div > h2 > span{
+    color: red;
+}
+#country-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
