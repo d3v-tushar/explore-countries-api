@@ -4,16 +4,17 @@ try{
     const data = await response.json();
     displayCountries(data);
 }
-catch{
+catch(error){
     console.log(error);
 }
 };
 
 const displayCountries = (counties) =>{
-    // console.log(counties);
+    console.log(counties);
     const container = document.getElementById('country-container');
+    counties.sort((x,y) => y.population - x.population)
     const country = counties.map(country =>{
-        console.log(country);
+        // console.log(country);
         const {name, flags, continents, capital, population, timezones, languages} = country;
         const countryDiv = document.createElement('div');
         countryDiv.classList.add('country-div')
